@@ -1,0 +1,156 @@
+<html>
+	<body style="font-family:sans-serif">
+	<body bgcolor="LightSlateGrey">
+<!--  I changed the font for extra credit, but I didn't use one of the example fonts because I wanted to give it my own look! -->
+	<head>
+		<title>Java Greeting Program</title>
+	</head>
+
+	<center>
+		<h1>Java Greeting Program</h1>
+		<h3>My name is: Alex Mintz </h3>
+		<h3>My username is: anmintz </h3>
+
+		<script type="text/javascript">
+		var mydate= new Date()
+		var theyear=mydate.getFullYear()
+		var themonth=mydate.getMonth()+1
+		var thetoday=mydate.getDate()
+		document.write("Today's date is: ")
+		document.write(themonth+"/"+thetoday+"/"+theyear)
+		</script>
+
+	</center>
+
+	<br>
+
+	<script>
+		function myFunction()
+		{
+			alert("General Kenobi.");
+		}
+	</script>
+
+	
+	<body>
+
+		<center>
+			<input type="button" onclick="myFunction()" value=" Hello There." />
+		</center>
+
+		<hr>
+
+		This is a simple text greetings program. Enter a name and how you feel about the person
+		below, then click on the "greet" button to see the result!
+		
+		<P>
+
+
+		<form name="MyForm">
+		
+			&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp; <b> NAME </b>  &nbsp;&nbsp;
+
+			<input name="name_of_person" size="25" type="text">
+
+			
+			<br>
+			<br>
+
+			<b> How do you feel about this person? </b>
+
+			
+			<select name="my_menu" size="2">
+				<option value="Love_value">Love</option>
+				<option value="Like_value">Like</option>
+				<option value="Dislike_value">Dislike</option>
+				<option value="Hate_value">Hate</option>
+			</select>
+
+			
+			<pre>
+
+
+
+
+			</pre>
+
+			
+			<center>
+			
+				<input name="greet_button" value="Greet" onclick="this.form.the_result_of_the_greeting.value= my_function(
+				this.form.name_of_person.value,
+				this.form.my_menu.options[ this.form.my_menu.selectedIndex].value)" type="button">
+				
+
+				<input name="the_result_of_the_greeting" size="35" type="text">
+
+
+				<pre>
+
+
+
+				</pre>
+
+				<hr>
+				
+				<a href="https://anmintz.github.io/codperks/index.html" 
+					onMouseOver="document.bgColor='pink'; return true;"
+					onMouseOut="document.bgColor='dodgerblue'; return true;">
+					Click Here to go to a cool website!
+				</a>
+				
+			</center>
+
+		</form>
+	</body>
+
+	<script language="javascript">
+		function my_function(value1, value2)
+		{
+			<!-- Start with an empty string called resulting_string. -->
+			var resulting_string = "";
+
+			<!-- If no name was given... -->
+			if (value1 == "")
+			{	
+				<!-- store "I don't know who you are." in resulting_string. -->
+				resulting_string = "I don't know who you are.";
+			}
+			<!-- otherwise, if love was selected in the menu... -->
+			else if ( value2 == "Love_value" )
+			{
+				<!-- store "I sincerely love you" and the name in resulting_string. -->
+				resulting_string = "I sincerely love you " + value1 + "!";
+			}
+			<!-- otherwise, if like was selected in the menu... -->
+			else if ( value2 == "Like_value" )
+			{
+				<!-- store "I actually kinda like you" and the name in resulting_string. -->
+				resulting_string = "I actually kinda like you " + value1 + ".";
+			}
+			<!-- otherwise, if dislike was selected in the menu... -->
+			else if ( value2 == "Dislike_value" )
+			{
+				<!-- store "I don't really like you" and the name in resulting_string. -->
+				resulting_string = "I don't really like you " + value1 + ".";
+			}
+			<!-- Otherwise, if hate was selected in the menu... -->
+			else if ( value2 == "Hate_value" )
+			{	
+				<!-- store "I truly hate you" and thetoday name in resulting_string. -->
+				resulting_string = "I truly hate you " + value1 + "!";
+	      	}
+			<!-- Otherwise, if nothing above happens... -->
+			else
+			{	
+				<!-- store "ERROR HAS OCURRED" in resulting_string (because something should have happened before this). -->
+				resulting_string = "ERROR HAS OCCURRED";
+			}
+
+			<!-- Finally, return whatever was stored in resulting_string. -->
+			return resulting_string;
+		}
+	</script>
+
+</html>
+
